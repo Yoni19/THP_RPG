@@ -3,8 +3,8 @@ class Assassin extends Character {
 		super(name, hp, dmg, mana, status);
 	}
 
-	ShadowHit = () => {
+	shadowHit = () => {
 		
-		console.log(`${this.name} utilise SuperShield`);
+		console.log(`${this.name} utilise ShadowHit !`);
 	}
 }

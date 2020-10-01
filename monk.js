@@ -6,6 +6,6 @@ class Monk extends Character {
 	heal = () => {
 		this.hp = this.hp + 8;
 		this.mana = this.mana - 25;
-		console.log(`${this.name} utilise Phoenix ! Comme cet oiseau légendaire il renait de ses cendres et gagne gagne 8 points de vie mais perd 25 points de mana. Il a maintenant ${this.hp} points de vie et ${this.mana} points de mana.`);
+		console.log(`${this.name} utilise Heal ! Comme cet oiseau légendaire il renait de ses cendres et gagne gagne 8 points de vie mais perd 25 points de mana. Il a maintenant ${this.hp} points de vie et ${this.mana} points de mana.`);
 	}
 }

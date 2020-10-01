@@ -23,6 +23,6 @@ killed = () => {
 }
 
 takeDamage = () => {
-  // will see in class parameters
+
 }
 }

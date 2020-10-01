@@ -113,7 +113,7 @@ startTurn = () => {
            player.darkVision();
         
         } else if(player.constructor.name === 'Paladin'){
-          player.healingLighting();
+          player.healingLighting(userVictimSelection);
         }
       } else {
         console.log("Tu abandonnes ? Dégage, les lâches ne sont pas acceptés dans l'arène !")
@@ -130,7 +130,6 @@ startTurn = () => {
 }
 
    };
-
 
 theGame = new Game();
 document.getElementById('newgame').onclick = theGame.startGame;
