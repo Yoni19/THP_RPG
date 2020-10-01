@@ -8,7 +8,7 @@ class Character {
 
 }
 
-dealDamage = (vitim) => {
+dealDamage = (victim) => {
   victim.hp = victim.hp - this.dmg;
 }
 
