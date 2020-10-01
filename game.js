@@ -68,10 +68,11 @@ randomEnemy(array) {
 
 
 watchStats = () => {
+ 
   console.log("************************  Voici l'état actuel de notre bain de sang : ************************ ");
-  this.players.forEach(player => console.log(`${this.players.indexOf(player) + 1} - ${player.constructor.name} ${player.name}, ${player.hp} points de vie, ${player.mana} points de mana et ${player.dmg} points de dégats.`));
+  this.players.forEach(player => console.log(`${player.status} - ${this.players.indexOf(player) + 1} - ${player.constructor.name} ${player.name}, ${player.hp} points de vie, ${player.mana} points de mana et ${player.dmg} points de dégats.`));
   console.log("************************  Le suspens est insoutenable ! **************************************  ");
-
+  
 }
 
 skipTurn = () => {
@@ -110,7 +111,7 @@ startTurn = () => {
            player.heal();
 
          } else if(player.constructor.name === 'Fighter') {
-           player.darkVision();
+           player.darkVision(userVictimSelection);
         
         } else if(player.constructor.name === 'Paladin'){
           player.healingLighting(userVictimSelection);
@@ -120,9 +121,7 @@ startTurn = () => {
       }
     if (userVictimSelection.hp <= 0) {
       userVictimSelection.isDead();
-      let pos = this.players.indexOf(userVictimSelection.name);
-      this.players.splice(pos,1);
-
+     
       player.killed();
     }
   })
