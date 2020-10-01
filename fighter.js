@@ -1,6 +1,6 @@
 class Fighter extends Character{
-  constructor(name="Grace",hp=12,dmg=4,mana=40,status='playing'){
-    super(name,hp,dmg,status);
+  constructor(name="Grace", hp=12, dmg=4, mana=40, status='playing'){
+    super(name, hp, dmg, mana, status);
   }
 darkVision = () => {
   // dmg =5,mana -20
